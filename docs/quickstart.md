@@ -56,7 +56,7 @@ it.  The script's output is displayed and also saved to `~/cord/install.out`:
 
 ```
 curl -o ~/cord-in-a-box.sh https://raw.githubusercontent.com/opencord/cord/master/scripts/cord-in-a-box.sh
-bash ~/cord-in-a-box.sh -t
+bash ~/cord-in-a-box.sh -t | tee install.out
 ```
 
 The script takes a *long time* (at least two hours) to run.  Be patient!  If it
@@ -121,7 +121,7 @@ Once you have done this, you can inspect the status of the VM's by setting the
 `Vagrantfile`'s parent directory, then run `vagrant status`:
 
 ```
-~$ export VAGRANT_CWD=~/cord/build/targets/cord-in-a-box
+~$ export VAGRANT_CWD=~/cord/build/
 ~$ vagrant status
 Current machine states:
 
